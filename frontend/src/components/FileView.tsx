@@ -14,7 +14,6 @@ const FileView: React.FC = () => {
 
   useEffect(() => {
     const item = JSON.parse(localStorage.getItem("currentUser") || "");
-    console.log(item);
     if (item.length > 0) setUserid(item);
     fetch(`${BASE_URL}file/getfile/${id}`)
       .then((response) => response.json())

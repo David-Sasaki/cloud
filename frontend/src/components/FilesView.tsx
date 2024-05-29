@@ -44,7 +44,6 @@ const FilesView: React.FC = () => {
     const formData = new FormData();
     formData.append("file", file as File);
     axios.post(`${BASE_URL}file/upload/${id}`, formData).then(() => {
-      console.log("loading again");
       loadFiles();
     });
   };

@@ -7,10 +7,19 @@ import axios from "axios";
 const USERS = ["A", "B", "C"];
 const BASE_URL = process.env.REACT_APP_BASE_URL || "http://localhost:5000/";
 
+interface FileObj {
+  owner: string;
+  name: string;
+  data: Buffer;
+  contentType: string;
+  size: number;
+  users: Array<string>;
+}
+
 const FilesView: React.FC = () => {
   const { id } = useParams();
   const [file, setFile] = useState<File | null>(null);
-  const [files, setFiles] = useState<any[]>([]);
+  const [files, setFiles] = useState<FileObj[]>([]);
 
   const getTotalSize = () => {
     if (!files) return 0;

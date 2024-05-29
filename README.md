@@ -34,7 +34,7 @@ This project is a simplified version of Google Drive, allowing users to log in, 
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/yourusername/simple-cloud-drive.git
+   git clone https://github.com/David-Sasaki/cloud.git
    cd simple-cloud-drive
    ```
 

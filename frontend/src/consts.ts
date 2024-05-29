@@ -1,0 +1,1 @@
+export const SIZE_LIMIT = 5242880;
